@@ -1,0 +1,233 @@
+# LUXOR9 Design System
+
+## Brand Identity
+
+**Tagline:** "Build Your AI Empire"
+**Positioning:** The Autonomous AI Company Operating System
+**Aesthetic:** Mission Control for AI — NASA meets Cyberpunk
+
+---
+
+## Color Palette
+
+### Primary Colors
+```css
+--color-primary-50: #e6f9ff;
+--color-primary-100: #b3eaff;
+--color-primary-200: #80dbff;
+--color-primary-300: #4dcbff;
+--color-primary-400: #26bdff;
+--color-primary-500: #00d4ff;  /* PRIMARY */
+--color-primary-600: #00a8cc;
+--color-primary-700: #007d99;
+--color-primary-800: #005266;
+--color-primary-900: #002633;
+```
+
+### Secondary Colors (Purple)
+```css
+--color-secondary-50: #f3effe;
+--color-secondary-100: #dccdfe;
+--color-secondary-200: #c4abfd;
+--color-secondary-300: #ad89fd;
+--color-secondary-400: #9b68fc;
+--color-secondary-500: #8b5cf6;  /* SECONDARY */
+--color-secondary-600: #7347d9;
+--color-secondary-700: #5c35bb;
+--color-secondary-800: #45239d;
+--color-secondary-900: #2d117f;
+```
+
+### Accent Colors
+```css
+--color-accent-success: #10b981;   /* Emerald */
+--color-accent-warning: #f59e0b;   /* Amber */
+--color-accent-error: #ef4444;     /* Red */
+--color-accent-info: #3b82f6;      /* Blue */
+```
+
+### Dark Mode
+```css
+--color-dark-bg: #0a0a0f;
+--color-dark-surface: #12121a;
+--color-dark-elevated: #1a1a24;
+--color-dark-border: #1e1e2e;
+--color-dark-text: #e2e8f0;
+--color-dark-text-muted: #64748b;
+--color-dark-text-subtle: #475569;
+```
+
+### Light Mode
+```css
+--color-light-bg: #f8fafc;
+--color-light-surface: #ffffff;
+--color-light-elevated: #f1f5f9;
+--color-light-border: #e2e8f0;
+--color-light-text: #0f172a;
+--color-light-text-muted: #64748b;
+--color-light-text-subtle: #94a3b8;
+```
+
+---
+
+## Typography
+
+### Font Families
+```css
+--font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+--font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+--font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+```
+
+### Type Scale
+```css
+--text-display: 72px / 1.1 / -0.02em / 800;  /* Hero headlines */
+--text-h1: 48px / 1.2 / -0.02em / 800;        /* Page titles */
+--text-h2: 36px / 1.25 / -0.01em / 700;       /* Section titles */
+--text-h3: 24px / 1.3 / -0.01em / 700;        /* Card titles */
+--text-h4: 20px / 1.4 / 0 / 600;              /* Subsections */
+--text-body-lg: 18px / 1.6 / 0 / 400;         /* Lead paragraphs */
+--text-body: 16px / 1.6 / 0 / 400;            /* Body text */
+--text-body-sm: 14px / 1.5 / 0 / 400;        /* Small text */
+--text-caption: 12px / 1.4 / 0 / 500;       /* Labels */
+--text-tiny: 10px / 1.3 / 0.02em / 600;     /* Badges */
+```
+
+---
+
+## Spacing Scale (4px base)
+
+```css
+--space-0: 0;
+--space-1: 0.25rem;   /* 4px */
+--space-2: 0.5rem;    /* 8px */
+--space-3: 0.75rem;   /* 12px */
+--space-4: 1rem;      /* 16px */
+--space-5: 1.25rem;   /* 20px */
+--space-6: 1.5rem;    /* 24px */
+--space-8: 2rem;      /* 32px */
+--space-10: 2.5rem;   /* 40px */
+--space-12: 3rem;     /* 48px */
+--space-16: 4rem;     /* 64px */
+--space-20: 5rem;     /* 80px */
+--space-24: 6rem;     /* 96px */
+--space-32: 8rem;     /* 128px */
+```
+
+---
+
+## Border Radius
+
+```css
+--radius-none: 0;
+--radius-sm: 0.25rem;     /* 4px - Small elements */
+--radius-md: 0.5rem;       /* 8px - Buttons, inputs */
+--radius-lg: 0.75rem;     /* 12px - Cards */
+--radius-xl: 1rem;        /* 16px - Large cards */
+--radius-2xl: 1.5rem;     /* 24px - Features */
+--radius-full: 9999px;    /* Pills, avatars */
+```
+
+---
+
+## Shadows
+
+### Light Mode
+```css
+--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+--shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+```
+
+### Dark Mode (with glow effects)
+```css
+--shadow-glow-primary: 0 0 20px rgba(0, 212, 255, 0.3);
+--shadow-glow-secondary: 0 0 20px rgba(139, 92, 246, 0.3);
+--shadow-glow-success: 0 0 20px rgba(16, 185, 129, 0.3);
+```
+
+---
+
+## Motion & Animation
+
+### Durations
+```css
+--duration-instant: 50ms;
+--duration-fast: 150ms;
+--duration-normal: 300ms;
+--duration-slow: 500ms;
+--duration-slower: 700ms;
+```
+
+### Easings
+```css
+--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+--ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+--ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+--ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+```
+
+### Standard Animations
+```css
+--animate-fade-in: fadeIn 0.3s ease-out;
+--animate-slide-up: slideUp 0.4s var(--ease-out);
+--animate-slide-down: slideDown 0.4s var(--ease-out);
+--animate-scale-in: scaleIn 0.2s var(--ease-bounce);
+--animate-pulse-glow: pulseGlow 2s infinite;
+```
+
+---
+
+## Z-Index Scale
+
+```css
+--z-base: 0;
+--z-dropdown: 100;
+--z-sticky: 200;
+--z-fixed: 300;
+--z-modal-backdrop: 400;
+--z-modal: 500;
+--z-popover: 600;
+--z-tooltip: 700;
+--z-toast: 800;
+```
+
+---
+
+## Breakpoints
+
+```css
+--breakpoint-sm: 640px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 1024px;
+--breakpoint-xl: 1280px;
+--breakpoint-2xl: 1536px;
+```
+
+---
+
+## Component Patterns
+
+### Button Sizes
+```css
+--btn-height-sm: 32px;   /* Small */
+--btn-height-md: 40px;   /* Medium (default) */
+--btn-height-lg: 48px;   /* Large */
+--btn-height-xl: 56px;   /* Extra large */
+```
+
+### Input Heights
+```css
+--input-height-sm: 32px;
+--input-height-md: 40px;
+--input-height-lg: 48px;
+```
+
+### Card Padding
+```css
+--card-padding-sm: 1rem;    /* 16px */
+--card-padding-md: 1.5rem;  /* 24px */
+--card-padding-lg: 2rem;    /* 32px */
+```

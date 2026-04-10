@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  # 🧠 The Brain: Python FastAPI Backend
+  backend:
+    build:
+      context: /root/LUXOR9-Unified/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - /root/LUXOR9-Unified/deploy/backend/.env
+    depends_on:
+      - db
+      - redis
+    networks:
+      - luxor9-net
+    restart: always
+
+  # 🎨 The Face: Next.js Design System
+  frontend:
+    build:
+      context: /root/LUXOR9-Unified/frontend/luxor9-final
+      dockerfile: ../../frontend/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    networks:
+      - luxor9-net
+    restart: always
+
+  # 💾 Persistent State: PostgreSQL
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_password
+      POSTGRES_DB: luxor9
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - luxor9-net
+    restart: always
+
+  # ⚡ Real-time Pulse: Redis
+  redis:
+    image: redis:7-alpine
+    networks:
+      - luxor9-net
+    restart: always
+
+networks:
+  luxor9-net:
+    driver: bridge
+
+volumes:
+  pgdata:
